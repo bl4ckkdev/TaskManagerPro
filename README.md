@@ -32,7 +32,9 @@ Make sure that you have the <b>.NET Framework 6.0</b> installed, to download it 
 Download the .zip in the <b>Releases</b> section, unzip it and run the Task Manager Pro.exe file (as an administrator!)
 <br>
 ### Screenshots
+<p align="center">
 <img src="https://github.com/bl4ckkdev/TaskManagerPro/assets/72033313/bf2c3a91-6309-4882-84c8-91bf460e6e59" width="305" height="512">
 <img src="https://github.com/bl4ckkdev/TaskManagerPro/assets/72033313/8bf8dd4a-f72f-427b-86cc-15aff9e18a02" width="305" height="512">
 <img src="https://github.com/bl4ckkdev/TaskManagerPro/assets/72033313/f6303765-efc3-46a3-aaba-144f3f7cc918">
+</p>
 
