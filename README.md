@@ -28,6 +28,7 @@ Since this application is designed to be lightweight, it uses <b>0%</b> CPU whil
 - - [ ] Services
  
 ### Installation
+Make sure that you have the <b>.NET Framework 6.0</b> installed, to download it go to https://dotnet.microsoft.com/en-us/download/dotnet/6.0<br>
 Download the .zip in the <b>Releases</b> section, unzip it and run the Task Manager Pro.exe file (as an administrator!)
 <br>
 ### Screenshots
