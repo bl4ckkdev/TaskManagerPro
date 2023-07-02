@@ -1,0 +1,66 @@
+﻿<ui:UiPage x:Class="Task_Manager_Pro.Views.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Task_Manager_Pro.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="DashboardPage"
+    d:DataContext="{d:DesignInstance local:DashboardPage, IsDesignTimeCreatable=False}"
+    d:DesignHeight="860"
+    d:DesignWidth="460"
+    d:Background="{DynamicResource ApplicationBackgroundBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+    <Grid Margin="0,17,0,737">
+        <TextBlock Name="processes" Text="Processes (0)" TextAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,55" Width="385"></TextBlock>
+        <ui:TextBox PlaceholderText="Type a process name to search" Name="searchbox" TextChanged="searchbox_TextChanged"  Height="Auto" Margin="39,50,39,0" VerticalAlignment="Top"/>
+        <Grid/>
+
+
+        <Grid Margin="0,0,0,-785" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.081"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <ui:Button Grid.Column="1"  HorizontalContentAlignment="Center" Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}" Content="End Task" Click="Button_Click_2" Margin="0,0,-432,70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="35" Width="130" />
+            <ui:Button Grid.Column="1" HorizontalContentAlignment="Center" Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}" Content="Run New Task" Click="Button_Click_1" Margin="0,0,-294,70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="35" Width="130" />
+            <ui:Button Grid.Column="1" HorizontalContentAlignment="Center" Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}" IsCancel="True" Click="Button_Click" ClickMode="Press" Content="Refresh" Margin="0,0,-156,70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="35" Width="130" />
+        </Grid>
+        <Grid Margin="0,111,0,-656">
+            <ListView x:Name="listvi" FontSize="17" Margin="24,0,24,0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="CPU" Width="50" DisplayMemberBinding="{Binding CPU}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <!--<ui:DataGrid  Name="processlist">                                                      -->
+            <!--    <ui:DataGrid.Columns>                                                              -->
+            <!--        <DataGridTemplateColumn Width="100" >                                          -->
+            <!--            <DataGridTemplateColumn.CellTemplate>                                      -->
+            <!--                <DataTemplate>                                                         -->
+            <!--                    <TextBlock Text="asd" Background="white" FontSize="50"></TextBlock>-->
+            <!--                </DataTemplate>                                                        -->
+            <!--            </DataGridTemplateColumn.CellTemplate>                                     -->
+            <!--        </DataGridTemplateColumn>                                                      -->
+            <!--    </ui:DataGrid.Columns>                                                             -->
+            <!--</ui:DataGrid>                                                                         -->
+            
+            
+        </Grid>
+    </Grid>
+
+
+
+</ui:UiPage>
